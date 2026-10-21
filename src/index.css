@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  @apply bg-canopy-50/40 text-ink-800;
+  background-color: #f6f8f6;
+}
+
+/* Numeric sensor readouts use the mono face throughout the app */
+.readout {
+  font-family: 'IBM Plex Mono', ui-monospace, monospace;
+  font-feature-settings: 'tnum' 1;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #c2dbc9;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Visible keyboard focus ring across the app */
+:focus-visible {
+  outline: 2px solid #2f6b4f;
+  outline-offset: 2px;
+}
